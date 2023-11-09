@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="stylesNoCritical.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src='https://www.google.com/recaptcha/api.js?render=6Lfi-oUlAAAAAH096nscLz6tC10MeEsbKRxCldpR'> 
+    </script>
+    <script>
+    grecaptcha.ready(function() {
+    grecaptcha.execute('6Lfi-oUlAAAAAH096nscLz6tC10MeEsbKRxCldpR', {action: 'ejemplo'})
+    .then(function(token) {
+    var recaptchaResponse = document.getElementById('recaptchaResponse');
+    recaptchaResponse.value = token;
+    });});
+    grecaptcha.ready(function() {
+    grecaptcha.execute('6Lfi-oUlAAAAAH096nscLz6tC10MeEsbKRxCldpR', {action: 'ejemplo'})
+    .then(function(token) {
+    var recaptchaResponse2 = document.getElementById('recaptchaResponse2');
+    recaptchaResponse2.value = token;
+    });});
+    </script>    
+        
+    <title>Grupo Bicastro</title>
+</head>
+<body>
+    <div id="loader"></div>
+
+    <header id="headerNoFixed" style="display: none;">
+      <nav class="navbar navbar-expand-lg" >
+          <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                  <img src="logocompleto.png" alt="Logo" width="150" height="40" class="d-inline-block align-text-top">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel" ></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="nosotros.html">NOSOTROS</a>
+                  </li>
+                  <li class="nav-item active dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      EMPRESAS
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="empresa-castro.html">CASTRO ESTUDIO INMOBILIARIO</a></li>
+                      <li><a class="dropdown-item" href="empresa-bicastro.html">DESARROLLADORA BICASTRO</a></li>
+                      <li><a class="dropdown-item" href="empresa-bac.html">BAC - EST. ARQUITECTURA</a></li>
+                      <li><a class="dropdown-item" href="empresa-gimenez.html">GIMENEZ - EST. CONTABLE</a></li>
+                      <li><a class="dropdown-item" href="empresa-verna.html">VERNA & ASOC. - EST. JURIDICO </a></li>
+                    </ul>
+                  </li>
+                      <!-- <a class="nav-link active" aria-current="page" href="index.html#empresas">EMPRESAS</a> -->
+              
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="proyectos.html">PROYECTOS</a>
+                  </li>                  
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html#contacto">CONTACTO</a>
+                </li>
+                  
+                </ul>
+
+                <div id="socialToggle" class="navbar-nav justify-content-center flex-grow-1 pe-3" style="flex-direction: row; margin-left: 30px; margin-top: 40px; display: none;">
+                  <a href="https://www.instagram.com/grupobicastro/"><i class="fa fa-instagram linkedin" aria-hidden="false" id="socialFooter" style="color: #A72608 !important;"></i></a>
+                  <a href="https://www.linkedin.com/company/grupo-bicastro/"><i class="fa fa-linkedin linkedin" aria-hidden="false" id="socialFooter" style="color: #A72608 !important; margin-left: 20px"></i></a>
+                </div>
+                
+              </div>
+              <div class="offcanvas-footer" style="display: none">
+                <img src="logocompleto.png" alt="Logo" width="150" height="40" class="d-inline-block align-text-top" style="margin-left: 0px !important;">
+
+              </div>
+
+            </div>
+            <div class="socialNav">
+              <a href="https://www.instagram.com/grupobicastro/" target="_blank"><i class="fa fa-linkedin linkedin" aria-hidden="false"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/grupo-bicastro/" target="_blank" ><i class="fa fa-instagram linkedin" aria-hidden="false"></i>
+              </a>
+            </div>
+          </div>
+      </nav>
+    </header>
+
+    <div style="display: none;">
+      <nav class="navbar navbar-expand-lg navFix" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="Logo" width="150" height="30" class="d-inline-block align-text-top">
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Grupo Bicastro</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="nosotros.html">NOSOTROS</a>
+                </li>
+                <li class="nav-item active dropdown">
+                  <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    EMPRESAS
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="empresa-castro.html">CASTRO ESTUDIO INMOBILIARIO</a></li>
+                    <li><a class="dropdown-item" href="empresa-bicastro.html">DESARROLLADORA BICASTRO</a></li>
+                    <li><a class="dropdown-item" href="empresa-bac.html">BAC - EST. ARQUITECTURA</a></li>
+                    <li><a class="dropdown-item" href="empresa-gimenez.html">GIMENEZ - EST. CONTABLE</a></li>
+                    <li><a class="dropdown-item" href="empresa-verna.html">VERNA & ASOC. - EST. JURIDICO </a></li>
+                  </ul>
+                </li>
+                    <!-- <a class="nav-link active" aria-current="page" href="index.html#empresas">EMPRESAS</a> -->
+            
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="proyectos.html">PROYECTOS</a>
+                </li>                  
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html#contacto">CONTACTO</a>
+              </li>
+                
+              </ul>
+              
+            </div>
+
+          </div>
+          <div class="socialNav2">
+            <a href="https://www.instagram.com/grupobicastro/" target="_blank"><i class="fa fa-instagram linkedin2" aria-hidden="false"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/grupo-bicastro/" target="_blank" ><i class="fa fa-linkedin linkedin2" aria-hidden="false"></i>
+            </a>
+          </div>
+        </div>
+    </nav>
+    </div>
+
+    <div class="containerSaavedra">
+      <input type="checkbox" class="input" id="input1" name="inputs">
+      <input type="checkbox" class="input" id="input2" name="inputs">
+      <input type="checkbox" class="input" id="input3" name="inputs">
+      <label for="input1">
+        <div id="b1" class="button"></div>
+      </label>
+      <label for="input2">
+        <div id="b2" class="button"></div>
+      </label>
+      <label for="input3">
+        <div id="b3" class="button"></div>
+      </label>
+
+        <div id="content1" class="content">
+          <div style="text-align: right;">
+            <label for="input1" class="cross" style="color: rgb(191, 191, 191);">X</label>
+          </div>
+          <div class="swiffy-slider" style="margin-top: 20px;">
+            <ul class="slider-container">
+                <li><img src="slider/1/balcon.jpeg" style="max-width: 100%;height: 37rem; size: cover;"></li>
+                <li><img src="slider/1/bano.jpeg" style="max-width: 100%;height: 37rem;"></li>
+                <li><img src="slider/1/cocina.jpeg" style="max-width: 100%;height: 37rem;"></li>
+                <li><img src="slider/1/comedor.jpeg" style="max-width: 100%;height: 37rem;"></li>
+                <li><img src="slider/1/habitacion.jpeg" style="max-width: 100%;height: 37rem;"></li>
+                <li><img src="slider/1/living.jpeg" style="max-width: 100%;height: 37rem;"></li>
+                <li><img src="slider/1/living2.jpeg" style="max-width: 100%;height: 37rem;"></li>
+                <li><img src="slider/1/living3.jpeg" style="max-width: 100%;height: 37rem;"></li>
+                <li><img src="slider/1/terraza.jpeg" style="max-width: 100%;height: 37rem;"></li>
+            </ul>
+        
+            <button type="button" class="slider-nav"></button>
+            <button type="button" class="slider-nav slider-nav-next"></button>
+        
+            <div class="slider-indicators">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+            </div>
+          </div>
+        </div>
+        <div id="content2" class="content">
+          <div style="text-align: right;">
+            <label for="input2" class="cross">X</label>
+          </div>
+          <div class="swiffy-slider">
+            <ul class="slider-container">
+              <li><img src="slider/2/frente (1).jpeg" style="max-width: 100%;height: 37rem; size: cover;"></li>
+              <li><img src="slider/2/frente (2).jpeg" style="max-width: 100%;height: 37rem; size: cover;"></li>
+              <li><img src="slider/2/frente (3).jpeg" style="max-width: 100%;height: 37rem; size: cover;"></li>
+              <li><img src="slider/2/frente (4).jpeg" style="max-width: 100%;height: 37rem; size: cover;"></li>
+            </ul>
+        
+            <button type="button" class="slider-nav"></button>
+            <button type="button" class="slider-nav slider-nav-next"></button>
+        
+            <div class="slider-indicators">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+            </div>
+          </div>
+        </div>
+        <div id="content3" class="content">
+        <div style="text-align: right;">
+          <label for="input3" class="cross">X</label>
+        </div>
+        <div class="swiffy-slider">
+          <ul class="slider-container">
+            <li><img src="slider/3/coworking.jpeg" style="max-width: 100%;height: 37rem; size: cover;"></li>
+            <li><img src="slider/1/terraza2.jpeg" style="max-width: 100%;height: 37rem;"></li>
+            <li><img src="slider/1/terraza3.jpeg" style="max-width: 100%;height: 37rem;"></li>
+          </ul>
+      
+          <button type="button" class="slider-nav"></button>
+          <button type="button" class="slider-nav slider-nav-next"></button>
+      
+          <div class="slider-indicators">
+              <button class="active"></button>
+              <button></button>
+              <button></button>
+          </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- <div style="display: flex; justify-content: center;background-color: black;">
+      <img src="principal.jpg" alt="saavedra" style="width: 30%;">
+    </div> -->
+
+
+    
+
+
+    <!-- <div id="contacto"></div>
+    <div class="seccionDondeEstamos" >
+      <div class="dondeEstamosCartel1">
+        <div class="contenedorSextaSeccion">
+          <div>DONDE</div>
+          <div class="tituloRojoSexta">ESTAMOS</div>
+          <div style="font-size: 1.2rem;
+          font-family: 'Montserrat';
+          font-weight: 500;
+          color: #1D3441;
+          margin-top: 15px;">Informacion de Contacto</div>
+          <div style="font-size: 1rem;
+          font-family: 'Montserrat';
+          font-weight: 400;
+          padding-left: 20px;
+          color: #1D3441;
+          margin-top: 10px;"><i class="fa fa-map-marker" aria-hidden="true" style="font-size: 22px !important; margin-right: 10px;"></i>
+Domingo Faustino Sarmiento 1107 - San Miguel - Buenos Aires - Argentina</div>
+          <div style="font-size: 1rem;
+          font-family: 'Montserrat';
+          font-weight: 400;
+          padding-left: 20px;
+          color: #1D3441;"><i class="fa fa-phone" aria-hidden="true" style="font-size: 22px !important;margin-right: 10px"></i>
++5411 61825309</div>
+          <div style="font-size: 1rem;
+          font-family: 'Montserrat';
+          font-weight: 400;
+          padding-left: 20px;
+          color: #1D3441;"><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 22px !important;margin-right: 10px"></i>
++5411 4451-3457</div>
+          <div style="font-size: 1rem;
+          font-family: 'Montserrat';
+          font-weight: 400;
+          padding-left: 20px;
+          color: #1D3441;"><i class="fa fa-envelope" aria-hidden="true"style="font-size: 22px !important;margin-right: 10px"></i>
+administracion@bicastrosrl.com</div>
+          <div style="font-size: 1.2rem;
+          font-family: 'Montserrat';
+          font-weight: 500;
+          color: #1D3441;
+          margin-top: 10px;
+          text-align: center;
+          margin-left: -10%;">Nuestras Redes</div>
+          <div style="margin-left: 30px; margin-top: 5px;
+          text-align: center;
+          margin-left: -10%;">
+            <a href="https://www.instagram.com/grupobicastro/"><i class="fa fa-instagram linkedin" aria-hidden="false" id="socialFooter"></i></a>
+            <a href="https://www.linkedin.com/company/grupo-bicastro/"><i class="fa fa-linkedin linkedin" aria-hidden="false" id="socialFooter"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+      <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.2575296765012!2d-58.70985088481528!3d-34.54703438047411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd0940587a0b%3A0x83649530cb50ec25!2sDomingo%20Faustino%20Sarmiento%201107%2C%20B1663EDC%20San%20Miguel%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1672147484353!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <div class="dondeEstamosCartel">
+          <div class="contenedorSextaSeccion">
+            <div>DONDE</div>
+            <div class="tituloRojoSexta">ESTAMOS</div>
+            <div style="font-size: 1.3vw;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            color: #1D3441;
+            margin-top: 15px;">
+            
+            Informacion de Contacto</div>
+            
+            <div style="display: flex; flex-direction: column; margin-top: 15px; color: #1D3441;">
+          
+            
+              <div class="dondeEstamosTexto" style="display: inline-flex;
+              ">            
+                <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 25px !important; margin-left: -18px;"></i>              
+                <p>Domingo Faustino Sarmiento 1107 - San Miguel - Buenos Aires - Argentina</p>    
+              </div>
+              
+              <div class="dondeEstamosTexto" style="display: inline-flex;
+              margin-top: 0px;">
+              
+                <i class="fa fa-phone" aria-hidden="true" style="font-size: 25px !important;margin-left: -18px;"></i>
+                <p>+5411 61825309</p>
+
+              </div>
+              
+              
+              <div class="dondeEstamosTexto" style="display: inline-flex;
+              margin-top: 0px;">
+                <i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 25px !important;margin-left: -18px;"></i>
+                <p>+5411 4451-3457</p>
+              </div>
+
+
+              <div class="dondeEstamosTexto" style="display: inline-flex;
+              margin-top: 0px;">
+                <i class="fa fa-envelope" aria-hidden="true"style="font-size: 25px !important;margin-left: -18px;"></i>
+                <p>administracion@bicastrosrl.com</p>
+              </div>
+            
+          </div>
+           
+           <div style="font-size: 1.3vw;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            color: #1D3441;
+            margin-top: 10px;">Nuestras Redes</div>
+            <div style="margin-left: 30px; margin-top: -20px;">
+              <a href="https://www.instagram.com/grupobicastro/"><i class="fa fa-instagram linkedin" aria-hidden="false" id="socialFooter"></i></a>
+              <a href="https://www.linkedin.com/company/grupo-bicastro/"><i class="fa fa-linkedin linkedin" aria-hidden="false" id="socialFooter"></i></a>
+            </div>
+  
+          </div>
+        </div>
+      
+      </div>
+
+      
+    -->
+      <div id="prueba">
+        <a id="whatsFlotante" href="https://wa.me/1161825309" class="whatsApp whats-on-hover" target="_blank">
+          <i class="fa fa-whatsapp my-whatsApp"></i>
+          <div id="cartelWhatsapp">Contactanos</div>
+        </a>
+      </div>
+
+
+      <main>
+
+        <div class="container py-5 text-center">
+          <p>contactanos</p>
+          <a href="#" class="link float-on-hover">Float</a>
+        </div>
+      </main> 
+
+    <footer>
+
+      <div class="formularioContacto">
+        <h3 style="text-align: center;">Si queres más información contactate con nosotros</h3>
+
+        <form action="submitForm.php" method="POST" class="form-horizontal">
+          <div class="row">
+            <div class="col">
+              <input id="Name" name="Name" type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Nombre y Apellido">
+              <input type="text" name="Ubicacion" class="form-control" placeholder="Zona / Ubicación" aria-label="Zona / Ubicación">
+              <input type="text" name="Telefono" class="form-control" placeholder="Telefono" aria-label="Telefono">
+              <input id="Email" name="Email" type="email" class="form-control" placeholder="Email" aria-describedby="emailHelp">
+
+            </div>
+            <div class="col">
+              <select class="form-select" name="Motivo" placeholder="Motivo de su Consulta" id="motivo" style="border-radius: 0px !important; margin-top: 2px;" required>
+                <option selected>Motivo de su Consulta</option>
+                <option>Cotización</option>
+                <option>Alquiler</option>
+                <option>Inversión</option>
+                <option>Venta</option>
+                <option>Otro</option>
+              </select>              
+              <select class="form-select" name="Empresa" placeholder="Empresa" id="empresa" style="border-radius: 0px !important; margin-top: 2px;" required>
+                <option selected>Empresa</option>
+                <option>Castro Estudio Inmobiliario</option>
+                <option>Bicastro Desarrolladora</option>
+                <option>BAC Esudio de Arq.</option>
+                <option>Gimenez & Asociados</option>
+                <option>Verna & Asociados</option>
+              </select>              
+              <textarea id="Message" name="Message" class="form-control" placeholder="Mensaje" rows="3" style="height: 78px;"></textarea>
+            </div>
+          </div>
+          <!-- <input type="hidden" name="recaptcha_response" id="recaptchaResponse"> -->
+          <button type="submit" name="submit" value="Submit" class="btnEnviar">ENVIAR</button>
+        </form>
+      </div>
+
+      <div class="formularioContactoResponsive">
+        <h3 style="text-align: center;">Si queres más información contactate con nosotros</h3>
+
+        <form action="submitForm2.php" method="POST" class="form-horizontal">
+          <div class="row">
+            <div class="col">
+              <input id="Name" name="Name" type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Nombre y Apellido" required>
+              <input type="text" name="Ubicacion" class="form-control" placeholder="Zona / Ubicación" aria-label="Zona / Ubicación">
+              <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefono" required>
+              <input id="Email" name="Email" type="email" class="form-control" placeholder="Email" aria-describedby="emailHelp" required>
+              <select class="form-select" name="Motivo" placeholder="Motivo de su Consulta" id="motivo" style="border-radius: 0px !important; margin-top: 2px;" required>
+                <option selected>Motivo de su Consulta</option>
+                <option>Cotización</option>
+                <option>Alquiler</option>
+                <option>Inversión</option>
+                <option>Venta</option>
+                <option>Otro</option>
+              </select>              
+              <select class="form-select" name="Empresa" placeholder="Empresa" id="empresa" style="border-radius: 0px !important; margin-top: 2px;" required>
+                <option selected>Empresa</option>
+                <option>Castro Estudio Inmobiliario</option>
+                <option>Bicastro Desarrolladora</option>
+                <option>BAC Esudio de Arq.</option>
+                <option>Gimenez & Asociados</option>
+                <option>Verna & Asociados</option>
+              </select>              
+              <textarea id="Message" name="Message" class="form-control" placeholder="Mensaje" rows="3" style="height: 78px;" required></textarea>
+
+            </div>
+          </div>
+          <!-- <input type="hidden" name="recaptcha_response" id="recaptchaResponse2"> -->
+          <button type="submit" name="submit" value="Submit" class="btnEnviar">ENVIAR</button>
+        </form>
+      </div>
+
+      <div class="fondoFooter">
+        <a href="index.html"><img class="logoFooter" src="logocompleto.png" alt="" style="width: auto; height:60px;"></a>
+        <img class="nuestrasEmpresasResponsive" src="nuestrasEmpresasResponsive.jpg" alt="" style="width: auto; height:30px; display: none">
+        <div class="footerEmpresas">
+          <img class="nuestrasEmpresas" src="BANNER INFERIOR2.png" alt="" style="width: auto; height:100px;">
+          <a class="footerEmpresaIndividual" href="empresa-castro.html"><img src="LOGOS INDIVIDUALES/CASTRO.png" alt=""></a>
+          <a class="footerEmpresaIndividual" href="empresa-bicastro.html"><img src="LOGOS INDIVIDUALES/BICASTRO.png" alt="" ></a>
+          <a class="footerEmpresaIndividual" href="empresa-bac.html"><img src="LOGOS INDIVIDUALES/BAC.png" alt="" ></a>
+          <a class="footerEmpresaIndividual" href="empresa-gimenez.html"><img src="LOGOS INDIVIDUALES/GIMENEZ.png" alt=""></a>
+          <a class="footerEmpresaIndividual" href="empresa-verna.html"><img src="LOGOS INDIVIDUALES/VERNA.png" alt=""></a>
+        </div>
+        <img class="bannerResponsive" src="bannerResponsive.png" alt="" style="width: auto; height:100px; display: none;">
+        <img class="direccion" src="pie direccion.png" alt="" style="width: 200px; height:60px;">
+        <img class="direccionResp" src="direccionResponsive.png" alt="" style="width: auto; height:60px; display: none;">
+
+      </div>
+
+
+    </footer>
+
+
+
+
+</body>
+<script src="index.js"></script>
+
+</html>
